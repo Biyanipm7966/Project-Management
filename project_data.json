@@ -1,0 +1,17 @@
+{
+    "project_name": "Sample Project",
+    "recent_changes": [
+        {"change": "Initial project setup", "date": "2024-10-01"},
+        {"change": "Added project documents", "date": "2024-10-02"}
+    ],
+    "deadlines": [
+        {"task": "Submit proposal", "date": "2024-10-10"},
+        {"task": "Complete first milestone", "date": "2024-11-05"}
+    ],
+    "aoa": {
+        "activities": [
+            {"name": "A", "start": 0, "end": 5},
+            {"name": "B", "start": 5, "end": 10}
+        ]
+    }
+}
