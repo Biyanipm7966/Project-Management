@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Project Dashboard</h1>
+<h2>{{ project_data.project_name }}</h2>
+
+<h3>Recent Changes</h3>
+<table border="1">
+    <tr>
+        <th>Change</th>
+        <th>Date</th>
+    </tr>
+    {% for change in project_data.recent_changes %}
+    <tr>
+        <td>{{ change.change }}</td>
+        <td>{{ change.date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
