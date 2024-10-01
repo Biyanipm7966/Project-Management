@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>AOA Diagram</h1>
+<canvas id="aoaCanvas"></canvas>
+<script>
+    const activities = {{ project_data.aoa.activities | tojson }};
+    drawAOA(activities);
+</script>
+{% endblock %}
