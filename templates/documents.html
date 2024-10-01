@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Project Documents</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="document">
+    <button type="submit">Upload</button>
+</form>
+
+<h2>Uploaded Documents</h2>
+<ul>
+    <!-- List project documents here -->
+</ul>
+{% endblock %}
