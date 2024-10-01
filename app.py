@@ -20,12 +20,23 @@ def dashboard():
     
     return render_template('dashboard.html', project=session.get('project'))
 
+from flask import Flask, render_template, request, session
+
+app = Flask(__name__)
+app.secret_key = 'your_secret_key'
+
 @app.route('/calendar', methods=['GET', 'POST'])
 def calendar():
     if request.method == 'POST':
         title = request.form['title']
         date = request.form['date']
+        
+        # Save the events in session storage
         if 'events' not in session:
             session['events'] = []
         session['events'].append({'title': title, 'date': date})
+        
     return render_template('calendar.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)

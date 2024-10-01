@@ -1,9 +1,7 @@
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
 <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
 
-<div id='calendar'></div>
+<div id="calendar"></div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -11,12 +9,12 @@
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
             events: [
-                {% if session['events'] %}
+                {% if session.get('events') %}
                     {% for event in session['events'] %}
                     {
-                        title: '{{ event.title }}',
-                        start: '{{ event.date }}'
-                    },
+                        title: "{{ event['title'] | safe }}",
+                        start: "{{ event['date'] | safe }}"
+                    }{% if not loop.last %},{% endif %}
                     {% endfor %}
                 {% endif %}
             ]
