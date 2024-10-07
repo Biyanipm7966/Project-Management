@@ -1,38 +1,27 @@
-from flask import Flask, render_template, request, jsonify
-import json
+from flask import Flask, render_template
+from project_data import project_info
+from diagrams import create_gantt_chart, create_wbs_diagram, create_aoa_diagram
 
 app = Flask(__name__)
 
-# Load the project data from JSON
-def load_project_data():
-    with open('project_data.json') as f:
-        return json.load(f)
-
-# Save the project data to JSON
-def save_project_data(data):
-    with open('project_data.json', 'w') as f:
-        json.dump(data, f)
-
 @app.route('/')
 def dashboard():
-    project_data = load_project_data()
-    return render_template('dashboard.html', project_data=project_data)
+    return render_template('index.html', project=project_info)
 
 @app.route('/calendar')
 def calendar():
-    return render_template('calendar.html')
-
-@app.route('/aoa')
-def aoa():
-    return render_template('aoa.html')
+    gantt_chart_url = create_gantt_chart()
+    return render_template('calendar.html', gantt_chart=gantt_chart_url)
 
 @app.route('/wbs_mindmap')
 def wbs_mindmap():
-    return render_template('wbs_mindmap.html')
+    wbs_diagram_url = create_wbs_diagram()
+    return render_template('wbs_mindmap.html', wbs_diagram=wbs_diagram_url)
 
-@app.route('/documents')
-def documents():
-    return render_template('documents.html')
+@app.route('/aoa_diagram')
+def aoa_diagram():
+    aoa_diagram_url = create_aoa_diagram()
+    return render_template('aoa_diagram.html', aoa_diagram=aoa_diagram_url)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
