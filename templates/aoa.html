@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOA Diagram - Punch Card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.5.0/frappe-gantt.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="/static/Images/img.webp" alt="Logo">
+            <div class="navbar-name">Punch Card</div>
+        </div>
+        <div>
+            <a href="../templates/index.html"><b>HOME</b></a>
+            <a href="../templates/charter.html"><b>CHARTER</b></a>
+            <a href="../templates/milestones.html"><b>MILESTONES</b></a>
+            <a href="../templates/budget.html"><b>BUDGET</b></a>
+            <a href="../templates/wbs.html"><b>WBS</b></a>
+            <a href="../templates/aoa.html" class="active"><b>AOA</b></a>
+            <a href="../templates/sow.html"><b>SOW</b></a>
+            <a href="../templates/team.html"><b>TEAM</b></a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({ startOnLoad: true });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="my-4"><b>AOA DIAGRAM</b></h2>
+        <div class="aoa-diagram-container text-start">
+            <div class="mermaid" style="font-size: 2em; height: 600px;">
+                graph LR;
+                Start-->A[Activity A];
+                Start-->B[Activity B];
+                A-->C[Activity C];
+                A-->D[Activity D];
+                B-->E[Activity E];
+                C-->F[Activity F];
+                E-->F;
+                D-->G[Activity G];
+                F-->G;
+                G-->End;
+            </div>
+            <p class="text-center mb-0"><b>Figure 1: Activity on Arrow (AOA) Diagram</b></p>
+        </div>
+    </div>
+</body>
+<footer><p class="text-center my-0"><b>&copy; 2024 Punch Card Project Management. All rights reserved.</b></p>
+</footer>
+</html>

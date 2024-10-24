@@ -1,0 +1,135 @@
+/* General styling */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+
+/* Navbar styling */
+.navbar {
+    background-color: #343a40;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .navbar-left {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.navbar .navbar-left img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar .navbar-left .navbar-name {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+.navbar a.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.navbar-links {
+    margin-left: auto;
+    display: flex;
+}
+
+
+/* Homepage styling */
+.jumbotron {
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 0.3rem;
+}
+
+.card {
+    background-color: #f8f9fa;
+}
+
+.jumbotron-logo {
+    float: right;
+    height: 300px;
+    margin-left: 30px;
+    margin-top: -100px;
+    margin-right: -20px;
+}
+
+
+/* Charter styling */
+.container h2{
+    text-align: center;
+    flex: 1;
+}
+
+
+/* Milestones styling */
+.title h2{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+#ganttChart {
+    margin-top: 50px;
+}
+
+
+/* WBS styling */
+.my-4 h2{
+    text-align: center;
+    flex: 1;
+}
+
+
+/* team styling */
+.card-img-top {
+    width: 150px; /* Adjust to make the image larger or smaller */
+    height: 180px; /* Set the same value as width to make it square */
+    object-fit: cover; /* Ensures the image fills the square shape nicely */
+    border-radius: 10px; /* Optional: Add a slight curve to the corners */
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}

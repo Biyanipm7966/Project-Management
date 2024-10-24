@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Budget - Punch Card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.5.0/frappe-gantt.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="/static/Images/img.webp" alt="Logo">
+            <div class="navbar-name">Punch Card</div>
+        </div>
+        <div>
+            <a href="../templates/index.html"><b>HOME</b></a>
+            <a href="../templates/charter.html"><b>CHARTER</b></a>
+            <a href="../templates/milestones.html"><b>MILESTONES</b></a>
+            <a href="../templates/budget.html" class="active"><b>BUDGET</b></a>
+            <a href="../templates/wbs.html"><b>WBS</b></a>
+            <a href="../templates/aoa.html"><b>AOA</b></a>
+            <a href="../templates/sow.html"><b>SOW</b></a>
+            <a href="../templates/team.html"><b>TEAM</b></a>
+        </div>
+    </div>
+</head>
+<body>
+    <div class="container">
+        <h2 class="my-4"><b>PROJECT BUDGET</b></h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Estimated Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4" class="table-primary"><b>Direct Costs</b></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Data Transfer Services</td>
+                        <td>Cost to migrate data from on-premises to cloud, based on volume of data and transfer speed.</td>
+                        <td>$50,000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Cloud Storage Services</td>
+                        <td>Monthly charges for cloud storage capacity, including increased storage needs over time.</td>
+                        <td>$100,000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Backup and Redundancy Services</td>
+                        <td>Costs for cloud backup solutions to ensure data safety during and after migration.</td>
+                        <td>$30,000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="table-primary"><b>Indirect Costs</b></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Consulting Services</td>
+                        <td>Hiring external consultants for cloud setup and data migration expertise.</td>
+                        <td>$10,000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Training Costs</td>
+                        <td>Training internal staff to manage and operate the new cloud-based infrastructure.</td>
+                        <td>$5,000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="table-primary"><b>Contingency Costs</b></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Contingency Reserve</td>
+                        <td>50% contingency reserve for unexpected issues such as additional storage or data integrity concerns.</td>
+                        <td>$25,000</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td colspan="3" class="text-end"><b>Total Estimated Cost</b></td>
+                        <td><b>$220,000</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="alert alert-info mt-4" role="alert">
+            <b>Note:</b> The budget includes a 50% contingency reserve for unforeseen circumstances. Regular updates will be provided to ensure accurate tracking of all project costs.
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.5.0/frappe-gantt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<footer>
+    <p><b>&copy; 2024 Punch Card Project Management. All rights reserved.</b></p>
+</footer>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WBS - Punch Card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.5.0/frappe-gantt.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.5.0/frappe-gantt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.1.0/mermaid.min.js"></script>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="/static/Images/img.webp" alt="Logo">
+            <div class="navbar-name">Punch Card</div>
+        </div>
+        <div>
+            <a href="../templates/index.html"><b>HOME</b></a>
+            <a href="../templates/charter.html"><b>CHARTER</b></a>
+            <a href="../templates/milestones.html"><b>MILESTONES</b></a>
+            <a href="../templates/budget.html"><b>BUDGET</b></a>
+            <a href="../templates/wbs.html" class="active"><b>WBS</b></a>
+            <a href="../templates/aoa.html"><b>AOA</b></a>
+            <a href="../templates/sow.html"><b>SOW</b></a>
+            <a href="../templates/team.html"><b>TEAM</b></a>
+        </div>
+    </div>
+</head>
+<body>
+    <div class="my-4" style="margin: 30px;">
+        <h2><b>WORK BREAKDOWN STRUCTURE</b></h2>
+        <div style="margin-bottom: 20px;"></div>
+        <table class="table table-bordered text-center" style="border: 3px solid black; border-collapse: collapse;">
+            <thead style="border: 3px solid black;">
+                <tr>
+                    <th style="border: 3px solid #454545; background-color: #454545; color: white;">
+                        <b>Process</b>
+                    </th>
+                    <th style="border: 3px solid #454545; background-color: #454545; color: white;">
+                        <b>Needs</b>
+                    </th>
+                    <th style="border: 3px solid #454545; background-color: #454545; color: white;">
+                        <b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 3px solid black; padding-top: 40px;">
+                        <b>Planning and Preparation</b>
+                    </td>
+                    <td style="border: 3px solid black; padding-top: 20px;">
+                            Brainstorming,</br>
+                            Requiremnets Gathering,</br>
+                            Budgeting and Funding
+                    </td>
+                    <td style="border: 3px solid black;">
+                        Market Research,</br>
+                        Defining App Features,</br>
+                        Competitor Analysis,</br>
+                        Risk Assessment
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 3px solid black; padding-top: 60px;">
+                        <b>Development</b>
+                    </td>
+                    <td style="border: 3px solid black; padding-top: 50px;">
+                        Front-End Development,</br>
+                        Back-End Development
+                    </td>
+                    <td style="border: 3px solid black;">
+                        UI Design,</br>
+                        Create Wireframes,</br>
+                        Implement UX Design,</br>
+                        Set Up Database,</br>
+                        Integrate APIs,</br>
+                        Build Server-Side Logic
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 3px solid black; padding-top: 60px;">
+                        <b>Testing, Debugging and Marketing</b>
+                    </td>
+                    <td style="border: 3px solid black; padding-top: 40px;">
+                        Testing,</br>
+                        Quality Assurance,</br>
+                        Pre-launch Marketing
+                    </td>
+                    <td style="border: 3px solid black;">
+                        Unit Testing,</br>
+                        User Acceptance Testing,</br>
+                        Performance Testing,</br>
+                        Create Landing Page,</br>
+                        Social Media Campaign,</br>
+                        Reaching out to Influencers
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 3px solid black; padding-top: 40px;">
+                        <b>Launch</b>
+                    </td>
+                    <td style="border: 3px solid black; padding-top: 30px;">
+                        Launch,</br>
+                        Post Launch Support
+                    </td>
+                    <td style="border: 3px solid black;">
+                        Deploy App,</br>
+                        Collect User Feedback,</br>
+                        Bug Fixes,</br>
+                        Enhancing New Features
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<footer>
+    <p><b>&copy; 2024 Punch Card Project Management. All rights reserved.</b></p>
+</footer>
+</html>
