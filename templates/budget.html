@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.5.0/frappe-gantt.min.css">
     <link rel="stylesheet" href="/static/css/styles.css">
     <div class="navbar">
-        <div class="navbar-left">
-            <img src="/static/Images/img.webp" alt="Logo">
-            <div class="navbar-name">Punch Card</div>
-        </div>
+        <a href="/templates/index.html">
+            <div class="navbar-left">
+                <img src="/static/Images/img.png" alt="Logo">
+                <div class="navbar-name">Punch Card</div>
+            </div>
+        </a>
         <div>
             <a href="../templates/index.html"><b>HOME</b></a>
             <a href="../templates/charter.html"><b>CHARTER</b></a>
@@ -81,7 +83,8 @@
                     <tr>
                         <td></td>
                         <td>Contingency Reserve</td>
-                        <td>50% contingency reserve for unexpected issues such as additional storage or data integrity concerns.</td>
+                        <td>50% contingency reserve for unexpected issues such as additional storage or data integrity 
+                            concerns.</td>
                         <td>$25,000</td>
                     </tr>
                     <tr class="table-secondary">
@@ -92,7 +95,121 @@
             </table>
         </div>
         <div class="alert alert-info mt-4" role="alert">
-            <b>Note:</b> The budget includes a 50% contingency reserve for unforeseen circumstances. Regular updates will be provided to ensure accurate tracking of all project costs.
+            <b>Note:</b> The budget includes a 50% contingency reserve for unforeseen circumstances. Regular updates will be 
+            provided to ensure accurate tracking of all project costs.
+        </div>
+        <div class="my-4">
+            <h3><b>Estimation Techniques Used</b></h3>
+            <p style="text-align: justify;">
+                <ul>
+                    <li>We used Analogous Estimation based on similar past migration projects</li>
+                    <li>Bottom-Up Estimation by breaking down the costs for data transfer, cloud services, and backup systems.</li>
+                </ul>
+            </p>
+        </div>
+        <div class="my-4">
+            <h3><b>Assumptions</b></h3>
+            <p style="text-align: justify;">
+                <ul>
+                    <li>
+                        We assumed that the migration would take 3 months.
+                    </li>
+                    <li>
+                        The organization might require additional storage capacity after migration due to increased data needs 
+                        over time.
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div class="my-4">
+            <h3><b>List of Identified Risks</b></h3>
+            <p style="text-align: justify;">
+                <ul>
+                    <li>
+                        <b>Data Integrity Issues:</b>
+                        <ul>
+                            <li><b>Description: </b>During migration, data may become corrupted or incomplete, requiring additional 
+                                validation efforts.
+                            </li>
+                            <li>
+                                <b>Potential Impact: </b>Extra costs for data validation, cleaning, and re-migration. Estimated potential 
+                                impact: an additional 10-20% of the data transfer budget.
+                            </li>
+                        </ul>
+                    </li></br>
+                    <li>
+                        <b>Additional Security Requirements:</b>
+                        <ul>
+                            <li><b>Description: </b>New security standards or regulations may require more advanced encryption or security 
+                                protocols, increasing costs.
+                            </li>
+                            <li style="text-align: justify;">
+                                <b>Potential Impact: </b>Increased cloud service costs for enhanced security features, such as encryption 
+                                and multi-factor authentication. Estimated impact: an additional </br> 5-10% of cloud storage costs.
+                            </li></br>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Downtime During Migration</b>
+                        <ul>
+                            <li><b>Description: </b>Unplanned downtime during data migration may delay access to critical systems and incur 
+                                additional labor costs for troubleshooting.
+                            </li>
+                            <li style="text-align: justify;">
+                                <b>Potential Impact: </b>Extended downtime could result in an additional 5-7% in labor costs and potential 
+                                business interruptions.
+                            </li></br>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div class="my-4">
+            <h3><b>Cost Controlling Strategies</b></h3>
+            <p style="text-align: justify;">
+                <ul>
+                    <li>
+                        <b>Earned Value Management (EVM):</b>
+                        <ul>
+                            <li>We will use EVM to track the progress of the migration, ensuring that the actual costs incurred align with 
+                                the planned costs. This will allow us to detect any variances early in the process and adjust before overruns 
+                                occur.
+                            </li>
+                            <li>
+                                <b>Example: </b>If we see that 50% of the data has been migrated but 70% of the migration budget has already been used, 
+                                we will investigate and take corrective measures.
+                            </li>
+                        </ul>
+                    </li></br>
+                    <li>
+                        <b>Contingency Reserves:</b>
+                        <ul>
+                            <li>
+                                A 5% contingency reserve ($5,000) has been allocated specifically for known risks such as data integrity issues or additional 
+                                security needs. This reserve will be used only when these risks are realized, keeping the core budget intact.
+                            </li>
+                            <li>
+                                <b>Example: </b>If data integrity issues arise and re-migration is necessary, the reserve will cover the costs without exceeding 
+                                the project’s initial budget.
+                            </li>
+                        </ul>
+                    </li></br>
+                    <li>
+                        <b>Cost Baseline Monitoring and Security Review:</b>
+                        <ul>
+                            <li>
+                                We will monitor the cost baseline, ensuring that any deviations are flagged for review. In addition, we will conduct regular 
+                                security reviews to ensure that no unexpected security requirements increase costs. Any security-related costs that exceed the 
+                                baseline by 5% will trigger a review to adjust the budget or reallocate resources.
+                            </li>
+                            <li>
+                                <b>Example: </b>If new government regulations require stronger encryption protocols, we will reassess the cloud storage provider 
+                                and adjust the cost structure to maintain budget control.
+                            </li>
+                        </ul>
+                    </li></br>
+                </ul>
+            </p>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
