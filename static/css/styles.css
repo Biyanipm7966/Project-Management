@@ -69,6 +69,7 @@ body {
 .jumbotron {
     background-color: #f8f9fa; /* Light grey background */
     border-radius: 0.3rem;
+    padding-bottom: 270px;
 }
 
 .card {
@@ -76,11 +77,8 @@ body {
 }
 
 .jumbotron-logo {
-    float: right;
+    margin-top: 50px;
     height: 300px;
-    margin-left: 30px;
-    margin-top: -100px;
-    margin-right: -20px;
 }
 
 
@@ -88,6 +86,22 @@ body {
 .container h2{
     text-align: center;
     flex: 1;
+}
+
+.page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 81%;
+}
+
+.page-end .btn:hover {
+    background: #12acf3;
 }
 
 
