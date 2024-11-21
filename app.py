@@ -114,5 +114,9 @@ def sow():
 def team():
     return render_template('team.html')
 
+@app.route('/templates/review.html')
+def team():
+    return render_template('review.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -14,21 +14,6 @@ body {
     margin-bottom: 20px;
 }
 
-.page-end .btn {
-    padding: 10px 25px;
-    background: #1261f3;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    animation: fadeInUp 1s ease-in-out;
-    margin-left: 81%;
-}
-
-.page-end .btn:hover {
-    background: #12acf3;
-}
 
 
 /* Navbar styling */
@@ -81,6 +66,7 @@ body {
 }
 
 
+
 /* Homepage styling */
 .jumbotron {
     background-color: #f8f9fa; /* Light grey background */
@@ -98,11 +84,29 @@ body {
 }
 
 
+
 /* Charter styling */
 .container h2{
     text-align: center;
     flex: 1;
 }
+
+.charter-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 81%;
+}
+
+.charter-page-end .btn:hover {
+    background: #12acf3;
+}
+
 
 
 /* Milestones styling */
@@ -111,14 +115,45 @@ body {
     margin-top: 10px;
 }
 
-#calendar {
-    max-width: 900px;
-    margin: 20px auto;
-}
-
 #ganttChart {
     margin-top: 50px;
 }
+
+.milestones-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 77%;
+}
+
+.milestones-page-end .btn:hover {
+    background: #12acf3;
+}
+
+
+
+/* budget styling */
+.budget-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 80%;
+}
+
+.budget-page-end .btn:hover {
+    background: #12acf3;
+}
+
 
 
 /* WBS styling */
@@ -126,6 +161,66 @@ body {
     text-align: center;
     flex: 1;
 }
+
+.wbs-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 85.5%;
+}
+
+.wbs-page-end .btn:hover {
+    background: #12acf3;
+}
+
+
+
+/* AOA styling */
+.my-4 h2{
+    text-align: center;
+    flex: 1;
+}
+
+.aoa-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 80%;
+}
+
+.aoa-page-end .btn:hover {
+    background: #12acf3;
+}
+
+
+
+/* SOW styling */
+.sow-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 90%;
+}
+
+.wbs-page-end .btn:hover {
+    background: #12acf3;
+}
+
 
 
 /* team styling */
@@ -137,6 +232,23 @@ body {
     margin-top: 10px;
     margin-left: 20px;
 }
+
+.team-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 77%;
+}
+
+.team-page-end .btn:hover {
+    background: #12acf3;
+}
+
 
 
 /* Footer styling */
