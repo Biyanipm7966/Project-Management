@@ -137,7 +137,7 @@ body {
 
 
 
-/* budget styling */
+/* Budget styling */
 .budget-page-end .btn {
     padding: 10px 25px;
     background: #1261f3;
@@ -223,7 +223,7 @@ body {
 
 
 
-/* team styling */
+/* Team styling */
 .card-img-top {
     width: 150px; /* Adjust to make the image larger or smaller */
     height: 180px; /* Set the same value as width to make it square */
@@ -247,6 +247,14 @@ body {
 
 .team-page-end .btn:hover {
     background: #12acf3;
+}
+
+
+
+/* Review styling */
+.pdf {
+    margin-left: 350px;
+    margin-bottom: 50px;
 }
 
 

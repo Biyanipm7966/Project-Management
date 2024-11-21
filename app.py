@@ -115,7 +115,7 @@ def team():
     return render_template('team.html')
 
 @app.route('/templates/review.html')
-def team():
+def review():
     return render_template('review.html')
 
 if __name__ == '__main__':
