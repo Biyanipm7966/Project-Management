@@ -71,7 +71,6 @@ body {
 .jumbotron {
     background-color: #f8f9fa; /* Light grey background */
     border-radius: 0.3rem;
-    padding-bottom: 270px;
 }
 
 .card {
@@ -128,7 +127,7 @@ body {
     border-radius: 5px;
     transition: background 0.3s ease;
     animation: fadeInUp 1s ease-in-out;
-    margin-left: 77%;
+    margin-left: 81.5%;
 }
 
 .milestones-page-end .btn:hover {
@@ -204,25 +203,6 @@ body {
 
 
 
-/* SOW styling */
-.sow-page-end .btn {
-    padding: 10px 25px;
-    background: #1261f3;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    animation: fadeInUp 1s ease-in-out;
-    margin-left: 90%;
-}
-
-.wbs-page-end .btn:hover {
-    background: #12acf3;
-}
-
-
-
 /* Team styling */
 .card-img-top {
     width: 150px; /* Adjust to make the image larger or smaller */
@@ -242,10 +222,147 @@ body {
     border-radius: 5px;
     transition: background 0.3s ease;
     animation: fadeInUp 1s ease-in-out;
-    margin-left: 77%;
+    margin-left: 84%;
 }
 
 .team-page-end .btn:hover {
+    background: #12acf3;
+}
+
+
+
+/* SOW styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.thought-bubble-lt {
+    position: relative;
+    background-color: #f0f8ff;
+    border: 2px solid #6b8e23;
+    color: #333;
+    padding: 30px; /* Increase padding for larger spacing inside */
+    width: 300px;
+    border-radius: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    width: 1450px; /* Increase width */
+    font-size: 18px; /* Optional: Adjust font size for larger text */
+    margin-left: 25px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.thought-bubble-rt {
+   position: relative;
+   background-color: #f0f8ff;
+   border: 2px solid #6b8e23;
+   color: #333;
+   padding: 30px; /* Increase padding for larger spacing inside */
+   width: 300px;
+   border-radius: 25px;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+   text-align: center;
+   width: 1450px; /* Increase width */
+   font-size: 18px; /* Optional: Adjust font size for larger text */
+   margin-left: 25px;
+   margin-right: 15px;
+   margin-bottom: 15px;
+}
+
+.thought-bubble-lt::after {
+   content: '';
+   position: absolute;
+   bottom: -40px;
+   left: 15%;
+   width: 30px;
+   height: 30px;
+   background-color: #f0f8ff;
+   border: 2px solid #6b8e23;
+   border-radius: 50%;
+   z-index: -1;
+}
+
+.thought-bubble-lt::before {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 10%;
+    width: 30px;
+    height: 30px;
+    background-color: #f0f8ff;
+    border: 2px solid #6b8e23;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.thought-bubble-image-lt {
+    display: block;
+    margin: 50px 1350px 0 auto; /* Center the image and space it below */
+    width: 120px; /* Adjust the size of the image */
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.thought-bubble-rt::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 83%;
+    width: 30px;
+    height: 30px;
+    background-color: #f0f8ff;
+    border: 2px solid #6b8e23;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.thought-bubble-rt::before {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 88%;
+    width: 30px;
+    height: 30px;
+    background-color: #f0f8ff;
+    border: 2px solid #6b8e23;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.thought-bubble-image-rt {
+    display: block;
+    margin: 50px 45px 0 auto; /* Center the image and space it below */
+    width: 120px; /* Adjust the size of the image */
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.sow-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 87%;
+}
+
+.sow-page-end .btn:hover {
     background: #12acf3;
 }
 
