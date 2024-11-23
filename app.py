@@ -110,6 +110,10 @@ def aoa():
 def sow():
     return render_template('sow.html')
 
+@app.route('/templates/risks.html')
+def risks():
+    return render_template('risks.html')
+
 @app.route('/templates/team.html')
 def team():
     return render_template('team.html')

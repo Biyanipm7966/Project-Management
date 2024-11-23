@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Analysis - Punch Card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.5.0/frappe-gantt.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <div class="navbar">
+        <a href="/templates/index.html">
+            <div class="navbar-left">
+                <img src="/static/Images/img.png" alt="Logo">
+                <div class="navbar-name">Punch Card</div>
+            </div>
+        </a>
+        <div>
+            <a href="../templates/index.html"><b>HOME</b></a>
+            <a href="../templates/charter.html"><b>CHARTER</b></a>
+            <a href="../templates/milestones.html"><b>MILESTONES</b></a>
+            <a href="../templates/budget.html"><b>BUDGET</b></a>
+            <a href="../templates/wbs.html"><b>WBS</b></a>
+            <a href="../templates/aoa.html"><b>AOA</b></a>
+            <a href="../templates/risks.html" class="active"><b>RISKS</b></a>
+            <a href="../templates/team.html"><b>TEAM</b></a>
+            <a href="../templates/sow.html"><b>SOW</b></a>
+            <a href="../templates/review.html"><b>REVIEW</b></a>
+        </div>
+    </div>
+</head>
+<body>
+    <div class="container">
+        <h2 class="my-4"><b>SAFETY AND RISK ANALYSIS</b></h2>
+
+    <!-- Risk Overview Section -->
+    <div class="mb-4">
+        <h4><b>Overview of Risks</b></h4>
+        <p>
+            Risk analysis is essential to identify, assess, and mitigate potential risks that could impact the Punch 
+            Card project. Below is a detailed analysis of key risks and strategies to address them.
+        </p>
+    </div>
+
+    <!-- Risk Table -->
+    <div class="mb-4">
+        <h4><b>Identified Risks</b></h4>
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>Risk ID</th>
+                    <th>Description</th>
+                    <th>Impact</th>
+                    <th>Probability</th>
+                    <th>Decription</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Data Integrity Issues</td>
+                    <td>High</td>
+                    <td>Medium</td>
+                    <td>During the migration process, there is a risk of data becoming corrupted or incomplete. 
+                        This could result from system errors, incomplete transfer protocols, or compatibility issues 
+                        between the legacy UC Flex system and the new Punch Card system. Such problems necessitate 
+                        additional efforts for data validation, cleaning, and potential re-migration.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Additional Security Requirements</td>
+                    <td>High</td>
+                    <td>Medium</td>
+                    <td>The new system may need to comply with updated security standards or regulations, such as 
+                        stricter encryption protocols, multi-factor authentication, or other advanced security 
+                        measures. These enhancements are critical to ensuring data confidentiality, integrity, 
+                        and compliance with industry standards.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Downtime During Migration</td>
+                    <td>High</td>
+                    <td>Medium</td>
+                    <td>Unplanned downtime during the data migration process could occur due to unexpected system 
+                        failures, software errors, or inadequate testing before the transition. This would delay 
+                        access to critical systems, disrupt operations, and require additional labor for 
+                        troubleshooting and resolving the issues.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Mitigation Strategies -->
+    <div class="mb-4">
+        <h4><b>Mitigation Strategies</b></h4>
+        <ul>
+            <li>
+                <b>Data Integrity Issues:</b>
+                <ul>
+                    <li>Conduct thorough pre-migration testing.</li>
+                    <li>Implement real-time validation scripts during migration.</li>
+                    <li>Have a contingency budget for data cleaning and re-migration.</li>
+                </ul>
+            </li></br>
+            <li>
+                <b>Additional Security Requirements:</b>
+                <ul>
+                    <li>Perform a security audit to anticipate necessary upgrades.</li>
+                    <li>Include costs for advanced encryption and security protocols in the initial budget.</li>
+                    <li>Partner with cloud service providers that offer scalable and customizable security features.</li>
+                </ul>
+            </li></br>
+            <li>
+                <b>Downtime During Migration:</b>
+                <ul>
+                    <li>Schedule migration during low-activity periods to minimize disruption.</li>
+                    <li>Create a robust backup plan for critical systems.</li>
+                    <li>Employ a dedicated team to monitor the migration process and troubleshoot issues in real-time.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mb-4">
+        <h4><b>Example Scenarios</b></h4>
+        <ul>
+            <b>Scenario 1: Additional Security Requirements</b>
+                <ul>
+                    <li><b>Situation: </b>New university-wide security protocols mandate the use of advanced encryption for all 
+                           employee data.</li>
+                    <li><b>Example: </b>Cloud storage vendors charge extra for enabling end-to-end encryption and 
+                           integrating multi-factor authentication (MFA) for administrator access.</li>
+                    <li><b>Mitigation Strategy:</b>
+                        <ul>
+                            <li>Evaluate cloud vendor's pricing structures beforehand and select one with scalable security options.</li>
+                            <li>Conduct security audits to ensure compliance with regulations without unnecessary expenses.</li>
+                        </ul>
+                    </li>
+                </ul>
+        </ul>
+        <ul>
+            <b>Scenario 2: Downtime During Migration</b>
+                <ul>
+                    <li><b>Situation: </b>Unexpected system incompatibility causes delays, preventing employees from 
+                           clocking in or out for an entire workday.</li>
+                    <li><b>Example: </b>Employees are unable to record attendance, requiring manual logging by HR, 
+                           resulting in errors and productivity loss.</li>
+                    <li><b>Mitigation Strategy:</b>
+                        <ul>
+                            <li>Schedule migration during off-peak hours or weekends to minimize operational impact.</li>
+                            <li>Establish a fallback system (e.g., manual timesheets) to ensure continuity during unplanned downtime.</li>
+                        </ul>
+                    </li>
+                </ul>
+        </ul>
+        <ul>
+            <b>Scenario 3: Physical Security of Servers</b>
+                <ul>
+                    <li><b>Situation: </b>On-premises servers hosting Punch Card are exposed to physical threats such 
+                           as theft, fire, or unauthorized access.</li>
+                    <li><b>Example: </b>A fire in the server room damages hardware, causing system outages and potential data loss.</li>
+                    <li><b>Mitigation Strategy:</b>
+                        <ul>
+                            <li>Install fire suppression systems, biometric access controls, and surveillance cameras in server rooms.</li>
+                            <li>Maintain regular backups of critical data in secure, off-site cloud locations.</li>
+                        </ul>
+                    </li>
+                </ul>
+        </ul>
+        <ul>
+            <b>Scenario 4: Insider Threats</b>
+            <ul>
+                <li><b>Situation: </b>A disgruntled employee attempts to tamper with system settings or delete 
+                       critical data.</li>
+                <li><b>Example: </b>A former developer with unauthorized access to GitHub repositories alters the 
+                       application code.</li>
+                <li><b>Mitigation Strategy:</b>
+                    <ul>
+                        <li>Enforce strict access controls and revoke permissions immediately upon employee exit.</li>
+                        <li>Use audit logs to monitor access and activity within the system.</li>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+        <ul>
+            <b>Scenario 5: Compliance Violation</b>
+            <ul>
+                <li><b>Situation: </b>The Punch Card system inadvertently stores personally identifiable information 
+                      (PII) in non-compliant ways, violating data protection laws.</li>
+                <li><b>Example: </b>Timekeeping records include sensitive details (e.g., social security numbers) 
+                       stored without encryption.</li>
+                <li><b>Mitigation Strategy:</b>
+                    <ul>
+                        <li>Ensure all data handling complies with GDPR or HIPAA standards as applicable.</li>
+                        <li>Conduct periodic compliance reviews with legal and IT teams.</li>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    
+
+    <!-- Callout Section -->
+    <div class="callout">
+        <h5><b>Important Note:</b></h5>
+        <p>
+            All team members must familiarize themselves with the risk management plan. Early identification and communication of risks are key to project success.
+        </p>
+    </div>
+</div>
+
+<div class="risks-page-end">
+    <div class="page-btn">
+        <a href="team.html" class="btn">Team >>></a>
+    </div>            
+</div>
+
+</body>
+<footer>
+    <p class="text-center my-0"><b>&copy; 2024 Punch Card Project Management. All rights reserved.</b></p>
+</footer>
+</html>
