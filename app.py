@@ -110,9 +110,17 @@ def aoa():
 def sow():
     return render_template('sow.html')
 
+@app.route('/templates/risks.html')
+def risks():
+    return render_template('risks.html')
+
 @app.route('/templates/team.html')
 def team():
     return render_template('team.html')
+
+@app.route('/templates/review.html')
+def review():
+    return render_template('review.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -14,21 +14,6 @@ body {
     margin-bottom: 20px;
 }
 
-.page-end .btn {
-    padding: 10px 25px;
-    background: #1261f3;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    animation: fadeInUp 1s ease-in-out;
-    margin-left: 81%;
-}
-
-.page-end .btn:hover {
-    background: #12acf3;
-}
 
 
 /* Navbar styling */
@@ -81,11 +66,11 @@ body {
 }
 
 
+
 /* Homepage styling */
 .jumbotron {
     background-color: #f8f9fa; /* Light grey background */
     border-radius: 0.3rem;
-    padding-bottom: 270px;
 }
 
 .card {
@@ -98,11 +83,29 @@ body {
 }
 
 
+
 /* Charter styling */
 .container h2{
     text-align: center;
     flex: 1;
 }
+
+.charter-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 76%;
+}
+
+.charter-page-end .btn:hover {
+    background: #12acf3;
+}
+
 
 
 /* Milestones styling */
@@ -111,14 +114,45 @@ body {
     margin-top: 10px;
 }
 
-#calendar {
-    max-width: 900px;
-    margin: 20px auto;
-}
-
 #ganttChart {
     margin-top: 50px;
 }
+
+.milestones-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 83.5%;
+}
+
+.milestones-page-end .btn:hover {
+    background: #12acf3;
+}
+
+
+
+/* Budget styling */
+.budget-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 80%;
+}
+
+.budget-page-end .btn:hover {
+    background: #12acf3;
+}
+
 
 
 /* WBS styling */
@@ -127,8 +161,84 @@ body {
     flex: 1;
 }
 
+.wbs-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 85.5%;
+}
 
-/* team styling */
+.wbs-page-end .btn:hover {
+    background: #12acf3;
+}
+
+
+
+/* AOA styling */
+.my-4 h2{
+    text-align: center;
+    flex: 1;
+}
+
+.aoa-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 80%;
+}
+
+.aoa-page-end .btn:hover {
+    background: #12acf3;
+}
+
+
+
+/* Risks styling */
+.container {
+    padding: 2rem;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.callout {
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid #dc3545;
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.risks-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 84%;
+}
+
+.risks-page-end .btn:hover {
+    background: #12acf3;
+}
+
+
+
+/* Team styling */
 .card-img-top {
     width: 150px; /* Adjust to make the image larger or smaller */
     height: 180px; /* Set the same value as width to make it square */
@@ -137,6 +247,177 @@ body {
     margin-top: 10px;
     margin-left: 20px;
 }
+
+.team-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 84%;
+}
+
+.team-page-end .btn:hover {
+    background: #12acf3;
+}
+
+
+
+/* SOW styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.thought-bubble-lt {
+    position: relative;
+    background-color: #f0f8ff;
+    border: 2px solid #6b8e23;
+    color: #333;
+    padding: 30px; /* Increase padding for larger spacing inside */
+    width: 300px;
+    border-radius: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    width: 1450px; /* Increase width */
+    font-size: 18px; /* Optional: Adjust font size for larger text */
+    margin-left: 25px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+ }
+
+.thought-bubble-rt {
+   position: relative;
+   background-color: #f0f8ff;
+   border: 2px solid #6b8e23;
+   color: #333;
+   padding: 30px; /* Increase padding for larger spacing inside */
+   width: 300px;
+   border-radius: 25px;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+   text-align: justify;
+   width: 1450px; /* Increase width */
+   font-size: 18px; /* Optional: Adjust font size for larger text */
+   margin-left: 25px;
+   margin-right: 15px;
+   margin-bottom: 15px;
+}
+
+.thought-bubble-lt::after {
+   content: '';
+   position: absolute;
+   bottom: -40px;
+   left: 15%;
+   width: 30px;
+   height: 30px;
+   background-color: #f0f8ff;
+   border: 2px solid #6b8e23;
+   border-radius: 50%;
+   z-index: -1;
+}
+
+.thought-bubble-lt::before {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    left: 10%;
+    width: 30px;
+    height: 30px;
+    background-color: #f0f8ff;
+    border: 2px solid #6b8e23;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.thought-bubble-image-lt {
+    display: block;
+    margin: 50px 1350px 0 auto; /* Center the image and space it below */
+    width: 120px; /* Adjust the size of the image */
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.thought-bubble-image-lt-1 {
+    display: block;
+    margin: 50px 1350px 0 auto; /* Center the image and space it below */
+    width: 120px; /* Adjust the size of the image */
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.thought-bubble-rt::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 83%;
+    width: 30px;
+    height: 30px;
+    background-color: #f0f8ff;
+    border: 2px solid #6b8e23;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.thought-bubble-rt::before {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    left: 88%;
+    width: 30px;
+    height: 30px;
+    background-color: #f0f8ff;
+    border: 2px solid #6b8e23;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.thought-bubble-image-rt {
+    display: block;
+    margin: 50px 45px 0 auto; /* Center the image and space it below */
+    width: 120px; /* Adjust the size of the image */
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.sow-page-end .btn {
+    padding: 10px 25px;
+    background: #1261f3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    margin-left: 87%;
+}
+
+.sow-page-end .btn:hover {
+    background: #12acf3;
+}
+
+
+
+/* Review styling */
+.pdf {
+    margin-left: 350px;
+    margin-bottom: 50px;
+}
+
 
 
 /* Footer styling */
