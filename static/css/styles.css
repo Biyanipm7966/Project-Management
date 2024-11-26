@@ -14,6 +14,22 @@ body {
     margin-bottom: 20px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex: 1 1 100%;
+    }
+
+    header, footer {
+        text-align: center;
+    }
+}
+
 
 
 /* Navbar styling */
