@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 # Sample project data
 dashboard_data = {
-    'project_name': 'UC Punch Card',
+    'project_name': 'Punch Card',
     'project_logo': 'https://example.com/logo.png',
     'status': 'On Track',
     'milestones': [
