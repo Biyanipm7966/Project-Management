@@ -1,10 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, send_file, jsonify
 import dash
 from dash import dcc, html, Input, Output, State
 import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly.express as px
 from datetime import datetime
+from docx import Document
+import io
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -82,43 +84,149 @@ def update_gantt_chart(n_clicks, task_name, start_date, end_date):
 
     return fig
 
-@app.route('/templates/index.html')
+@app.route('/generate-status-report', methods=['POST'])
+def generate_status_report():
+    try:
+        data = request.get_json()
+        name = data.get('name', 'Untitled Project')
+        date = data.get('date', 'No Date Provided')
+        status = data.get('status', 'No Status Provided')
+        phase = data.get('phase', 'No Phase Provided')
+        startDate = data.get('startDate', 'No Start Date Provided')
+        endDate = data.get('endDate', 'No End Date Provided')
+        sDescription = data.get('sDescription', ' ')
+        accomplishments = data.get('accomplishments', 'No Accomplishments Provided')
+        plannedwork = data.get('plannedwork', 'No Planned Work Provided')
+        currentissues = data.get('currentissues', 'No Current Issues Provided')
+        risks = data.get('risks', 'No Risks Provided')
+        budget = data.get('budget', 'No Budget Provided')
+        team = data.get('team', 'No Team Provided')
+        decisions = data.get('decisions', 'No Decisions Provided')
+
+        # Create Word document
+        doc = Document()
+        doc.add_heading(f"Status Report", level=1)
+        doc.add_paragraph(f"Project Name: {name}")
+        doc.add_paragraph(f"Report Date: {date}")
+        doc.add_paragraph(f"Project Status: {status}")
+        doc.add_paragraph(f"Project Phase: {phase}")
+        doc.add_paragraph(f"Project Start Date: {startDate}")
+        doc.add_paragraph(f"Project End Date: {endDate}")
+        doc.add_paragraph(f"Key Milestones: {sDescription}")
+        doc.add_paragraph(f"Accomplishments: {accomplishments}")
+        doc.add_paragraph(f"Planned Work: {plannedwork}")
+        doc.add_paragraph(f"Current Issues: {currentissues}")
+        doc.add_paragraph(f"Risks: {risks}")
+        doc.add_paragraph(f"Budget: {budget}")
+        doc.add_paragraph(f"Team: {team}")
+        doc.add_paragraph(f"Decisions Needed: {decisions}")
+
+        # Save the document to a BytesIO buffer
+        buffer = io.BytesIO()
+        doc.save(buffer)
+        buffer.seek(0)
+
+        # Return the Word document as a downloadable file
+        return send_file(
+            buffer,
+            as_attachment=True,
+            download_name=f"{date}_Status_Report.docx",
+            mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        )
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/generate-progress-report', methods=['POST'])
+def generate_progress_report():
+    try:
+        data = request.get_json()
+        pname = data.get('pname', 'Untitled Project')
+        rpauth = data.get('rpauth', 'No Author Provided')
+        rpdate = data.get('rpdate', 'No Date Provided')
+        objective = data.get('objective', 'No Objective Provided')
+        tasks = data.get('tasks', 'No Completed Tasks Provided')
+        milestones = data.get('milestones', 'No Reached Milestones Provided')
+        obstacles = data.get('obstacles', 'No Encountered Obstacles Provided')
+        delays = data.get('delays', 'No Delays Provided')
+        plannedtasks = data.get('plannedtasks', 'No Planned Tasks Provided')
+        deadlines = data.get('deadlines', 'No Deadlines Provided')
+        metrices = data.get('metrices', 'No Metrices and KPI Provided')
+        action = data.get('action', 'No Action Items Provided')
+        notes = data.get('notes', 'No Notes Items Provided')
+
+        # Create Word document
+        doc = Document()
+        doc.add_heading(f"Progress Report", level=1)
+        doc.add_paragraph(f"Project Name: {pname}")
+        doc.add_paragraph(f"Report Author: {rpauth}")
+        doc.add_paragraph(f"Report Date: {rpdate}")
+        doc.add_paragraph(f"Objectives for Reporting Period: {objective}")
+        doc.add_paragraph(f"Tasks Completed: {tasks}")
+        doc.add_paragraph(f"Milesones Reached: {milestones}")
+        doc.add_paragraph(f"Obstacles Encountered: {obstacles}")
+        doc.add_paragraph(f"Delays: {delays}")
+        doc.add_paragraph(f"Planned Tasks: {plannedtasks}")
+        doc.add_paragraph(f"Deadlines: {deadlines}")
+        doc.add_paragraph(f"Metrices and KPI: {metrices}")
+        doc.add_paragraph(f"Action Items: {action}")
+        doc.add_paragraph(f"Aditional Notes: {notes}")
+
+        # Save the document to a BytesIO buffer
+        buffer = io.BytesIO()
+        doc.save(buffer)
+        buffer.seek(0)
+
+        # Return the Word document as a downloadable file
+        return send_file(
+            buffer,
+            as_attachment=True,
+            download_name=f"{rpdate}_Progress_Report.docx",
+            mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        )
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/index.html')
 def home():
     return render_template('index.html')
 
-@app.route('/templates/charter.html')
+@app.route('/charter.html')
 def dashboard():
     return render_template('charter.html', data=dashboard_data)
 
-@app.route('/templates/milestones.html')
+@app.route('/milestones.html')
 def milestones():
     return render_template('milestones.html')
 
-@app.route('/templates/budget.html')
+@app.route('/budget.html')
 def budget():
     return render_template('budget.html')
 
-@app.route('/templates/wbs.html')
+@app.route('/wbs.html')
 def wbs():
     return render_template('wbs.html')
 
-@app.route('/templates/aoa.html')
+@app.route('/aoa.html')
 def aoa():
     return render_template('aoa.html')
 
-@app.route('/templates/sow.html')
+@app.route('/sow.html')
 def sow():
     return render_template('sow.html')
 
-@app.route('/templates/risks.html')
+@app.route('/risks.html')
 def risks():
     return render_template('risks.html')
 
-@app.route('/templates/team.html')
+@app.route('/reports.html')
+def reports():
+    return render_template('reports.html')
+
+@app.route('/team.html')
 def team():
     return render_template('team.html')
 
-@app.route('/templates/review.html')
+@app.route('/review.html')
 def review():
     return render_template('review.html')
 

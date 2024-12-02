@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPORTS - Punch Card</title>
+    <link rel="icon" href="/static/Images/img.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.5.0/frappe-gantt.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/reports.js"></script>
+    <div class="navbar">
+        <a href="/templates/index.html">
+            <div class="navbar-left">
+                <img src="/static/Images/img.png" alt="Logo">
+                <div class="navbar-name">Punch Card</div>
+            </div>
+        </a>
+        <div>
+            <a href="index.html"><b>HOME</b></a>
+            <a href="charter.html"><b>CHARTER</b></a>
+            <a href="milestones.html"><b>MILESTONES</b></a>
+            <a href="budget.html"><b>BUDGET</b></a>
+            <a href="wbs.html"><b>WBS</b></a>
+            <a href="aoa.html"><b>AOA</b></a>
+            <a href="risks.html"><b>RISKS</b></a>
+            <a href="reports.html" class="active"><b>REPORTS</b></a>
+            <a href="team.html"><b>TEAM</b></a>
+            <a href="sow.html"><b>SOW</b></a>
+            <a href="review.html"><b>REVIEW</b></a>
+        </div>
+    </div>
+</head>
+<body>
+    <div class="reports-container">
+        <h2 class="my-4"><b>Project Management Report Templates</b></h2>
+        
+        <div class="form-section">
+            <div>
+                    <div class="container mt-4">
+                        <h3 style="text-align: center;"><b>Generate Status Report</b></h3></br>
+                <h4>Project Overview</h4></br>
+                <form id="reportForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Project Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter the project name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Report Date</label>
+                        <input type="date" id="date" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Project Status</label>
+                        <select id="status" class="form-select" required>
+                            <option value=" "> </option>
+                            <option value="On Track">On Track</option>
+                            <option value="Off Track">Off Track</option>
+                            <option value="At Risk">At Risk</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phase" class="form-label">Project Phase</label>
+                        <select id="phase" class="form-select" required>
+                            <option value=" "> </option>
+                            <option value="Kickoff">Kickoff</option>
+                            <option value="Brainstorming">Brainstorming</option>
+                            <option value="Development">Development</option>
+                            <option value="Testing and Quality Assurance">Testing and Quality Assurance</option>
+                            <option value="Finalizing">Finalizing</option>
+                            <option value="Release">Release</option>
+                            <option value="Post Release">Post Release</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="startDate" class="form-label">Project Start Date</label>
+                        <input type="date" id="startDate" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="endDate" class="form-label">Project End Date</label>
+                        <input type="date" id="endDate" class="form-control" required>
+                    </div></br>
+                    <h4>Summary of Progress</h4></br>
+                    <div class="mb-3">
+                        <label for="statusDescription" class="form-label">Key Milestones</label>
+                        <textarea id="statusDescription" class="form-control" rows="4" placeholder="Milestone 1: [Description, Target Date, Status]" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="accomplishments" class="form-label">Accomplishments</label>
+                        <textarea id="accomplishments" class="form-control" rows="4" placeholder="List major accomplishments since the last report" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="plannedwork" class="form-label">Planned Work</label>
+                        <textarea id="plannedwork" class="form-control" rows="4" placeholder="List tasks planned for the next reporting period" required></textarea>
+                    </div></br>
+                    <h4>Issues and Risks</h4></br>
+                    <div class="mb-3">
+                        <label for="currentissues" class="form-label">Current Issues</label>
+                        <textarea id="currentissues" class="form-control" rows="4" placeholder="Describe any issues currently affecting the project, including their status and impact" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="risks" class="form-label">Risks</label>
+                        <textarea id="risks" class="form-control" rows="4" placeholder="List any risks identified, their potential impact, and mitigation plans" required></textarea>
+                    </div></br>
+                    <h4>Resource Status</h4></br>
+                    <div class="mb-3">
+                        <label for="budget" class="form-label">Budget</label>
+                        <textarea id="budget" class="form-control" rows="4" placeholder="Include details on budget consumption and any variances" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="team" class="form-label">Team</label>
+                        <textarea id="team" class="form-control" rows="4" placeholder="Briefly describe team capacity and resource allocation" required></textarea>
+                    </div></br>
+                    <h4>Decisions Needed</h4></br>
+                    <div class="mb-3">
+                        <label for="decisions" class="form-label">Decisions Needed</label>
+                        <textarea id="decisions" class="form-control" rows="4" placeholder="List any decisions that need approval or input from stakeholders" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="statusPreviewReport()">Generate Report</button>
+                </form>
+
+                <div id="reportPreview1" class="mt-4">
+                    <h4 style="text-align: center;">Report Preview</h4>
+                    <div id="previewContent1"></div>
+                    <button type="button" class="btn btn-success mt-3" onclick="statusDownloadReport()">Download Report</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function statusPreviewReport() {
+                const name = document.getElementById('name').value;
+                const date = document.getElementById('date').value;
+                const status = document.getElementById('status').value;
+                const phase = document.getElementById('phase').value;
+                const startDate = document.getElementById('startDate').value;
+                const endDate = document.getElementById('endDate').value;
+                const statusDescription = document.getElementById('statusDescription').value;
+                const accomplishments = document.getElementById('accomplishments').value;
+                const plannedwork = document.getElementById('plannedwork').value;
+                const currentissues = document.getElementById('currentissues').value;
+                const risks = document.getElementById('risks').value;
+                const budget = document.getElementById('budget').value;
+                const team = document.getElementById('team').value;
+                const decisions = document.getElementById('decisions').value;
+                const previewContent1 = document.getElementById('previewContent1');
+                previewContent1.innerHTML = `
+                    <h3><strong>Status Report</strong></h3>
+                    <p><strong>Project Name: </strong> ${name}</p>
+                    <p><strong>Report Date: </strong> ${date}</p>
+                    <p><strong>Project Status: </strong> ${status}</p>
+                    <p><strong>Project Phase: </strong> ${phase}</p>
+                    <p><strong>Project Start Date: </strong> ${startDate}</p>
+                    <p><strong>Project End Date: </strong> ${endDate}</p>
+                    <p><strong>Key Milestones: </strong> ${statusDescription}</p>
+                    <p><strong>Accomplishments: </strong> ${accomplishments}</p>
+                    <p><strong>Planned Work: </strong> ${plannedwork}</p>
+                    <p><strong>Current Issues: </strong> ${currentissues}</p>
+                    <p><strong>Risks: </strong> ${risks}</p>
+                    <p><strong>Budget: </strong> ${team}</p>
+                    <p><strong>Team: </strong> ${budget}</p>
+                    <p><strong>Decisions Needed: </strong> ${decisions}</p>
+                `;
+            }
+    
+            function statusDownloadReport() {
+                const name = document.getElementById('name').value;
+                const date = document.getElementById('date').value;
+                const status = document.getElementById('status').value;
+                const phase = document.getElementById('phase').value;
+                const startDate = document.getElementById('startDate').value;
+                const endDate = document.getElementById('endDate').value;
+                const statusDescription = document.getElementById('statusDescription').value;
+                const accomplishments = document.getElementById('accomplishments').value;
+                const plannedwork = document.getElementById('plannedwork').value;
+                const currentissues = document.getElementById('currentissues').value;
+                const risks = document.getElementById('risks').value;
+                const budget = document.getElementById('budget').value;
+                const team = document.getElementById('team').value;
+                const decisions = document.getElementById('decisions').value;
+    
+                fetch('/generate-status-report', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, date, status, phase, startDate, endDate, statusDescription, accomplishments, plannedwork, currentissues, risks, budget, team, decisions})
+                })
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `${date}_Status_Report.docx`;
+                    a.click();
+                });
+            }
+        </script>
+
+
+        <div class="container mt-4">
+            <h3 style="text-align: center;"><b>Generate Progress Reports</b></h3></br>
+            <form id="reportForm">
+            <h4>Project Overview</h4></br>
+                <div class="mb-3">
+                    <label for="pname" class="form-label">Project Name</label>
+                    <input type="text" id="pname" class="form-control" placeholder="Enter the project name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="rpauth" class="form-label">Report Author</label>
+                    <input type="text" id="rpauth" class="form-control" placeholder="Enter the author's name for this report" required>
+                </div>
+                <div class="mb-3">
+                    <label for="rpdate" class="form-label">Report Date</label>
+                    <input type="date" id="rpdate" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="objective" class="form-label">Objectives for Reporting Period</label>
+                    <input type="text" id="objective" class="form-control" placeholder="List the objectives set for this period" required>
+                </div></br>
+                <h4>Work Completed</h4></br>
+                <div class="mb-3">
+                    <label for="tasks" class="form-label">Tasks Completed</label>
+                    <textarea id="tasks" class="form-control" rows="4" placeholder="List tasks that were completed during the reporting period" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="milestones" class="form-label">Milestones Reached</label>
+                    <textarea id="milestones" class="form-control" rows="4" placeholder="List milestones achieved during this period" required></textarea>
+                </div></br>
+                <h4>Challanges</h4></br>
+                <div class="mb-3">
+                    <label for="obstacles" class="form-label">Obstacles Encountered</label>
+                    <textarea id="obstacles" class="form-control" rows="4" placeholder="List challenges or obstacles faced and how they were addressed" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="delays" class="form-label">Delays</label>
+                    <textarea id="delays" class="form-control" rows="4" placeholder="Describe any delays, their reasons, and potential impact on the timeline" required></textarea>
+                </div></br>
+                <h4>Upcoming Activities</h4></br>
+                <div class="mb-3">
+                    <label for="plannedtasks" class="form-label">Planned Tasks</label>
+                    <textarea id="plannedtasks" class="form-control" rows="4" placeholder="Describe any delays, their reasons, and potential impact on the timeline" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="deadlines" class="form-label">Deadlines</label>
+                    <textarea id="deadlines" class="form-control" rows="4" placeholder="Describe any delays, their reasons, and potential impact on the timeline" required></textarea>
+                </div></br>
+                <h4>Metrics and KPIs</h4></br>
+                <div class="mb-3">
+                    <label for="metrices" class="form-label">Metrices and KPI</label>
+                    <textarea id="metrices" class="form-control" rows="4" placeholder="Include measurable data like percentage of work completed, hours logged, or performance metrics" required></textarea>
+                </div></br>
+                <h4>Action Items</h4></br>
+                <div class="mb-3">
+                    <label for="action" class="form-label">Action Items</label>
+                    <textarea id="action" class="form-control" rows="4" placeholder="Include measurable data like percentage of work completed, hours logged, or performance metrics" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="notes" class="form-label">Additional Notes</label>
+                    <textarea id="notes" class="form-control" rows="4" placeholder="nclude any additional notes or comments relevant to the report" required></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="progressPreviewReport()">Generate Report</button>
+            </form>
+
+            <div id="reportPreview2" class="mt-4">
+                <h4 style="text-align: center;">Report Preview</h4>
+                <div id="previewContent2"></div>
+                <button type="button" class="btn btn-success mt-3" onclick="progressDownloadReport()">Download Report</button>
+            </div>
+        </div>
+
+        <script>
+            function progressPreviewReport() {
+                const pname = document.getElementById('pname').value;
+                const rpauth = document.getElementById('rpauth').value;
+                const rpdate = document.getElementById('rpdate').value;
+                const objective = document.getElementById('objective').value;
+                const tasks = document.getElementById('tasks').value;
+                const milestones = document.getElementById('milestones').value;
+                const obstacles = document.getElementById('obstacles').value;
+                const delays = document.getElementById('delays').value;
+                const plannedtasks = document.getElementById('plannedtasks').value;
+                const deadlines = document.getElementById('deadlines').value;
+                const metrices = document.getElementById('metrices').value;
+                const action = document.getElementById('action').value;
+                const notes = document.getElementById('notes').value;
+                const previewContent2 = document.getElementById('previewContent2');
+                previewContent2.innerHTML = `
+                    <h3><strong>Progress Report</strong></h3>
+                    <p><strong>Project Name: </strong> ${pname}</p>
+                    <p><strong>Report Author: </strong> ${rpauth}</p>
+                    <p><strong>Report Date: </strong> ${rpdate}</p>
+                    <p><strong>Objectives for Reporting Period: </strong> ${objective}</p>
+                    <p><strong>Tasks Completed: </strong> ${tasks}</p>
+                    <p><strong>Milestones Reached: </strong> ${milestones}</p>
+                    <p><strong>Obstacles Encountered: </strong> ${obstacles}</p>
+                    <p><strong>Delays: </strong> ${delays}</p>
+                    <p><strong>Planned Tasks: </strong> ${plannedtasks}</p>
+                    <p><strong>Deadlines: </strong> ${deadlines}</p>
+                    <p><strong>Metrices and KPI: </strong> ${metrices}</p>
+                    <p><strong>Action Items: </strong> ${action}</p>
+                    <p><strong>Additional Notes: </strong> ${notes}</p>
+                `;
+            }
+
+            function progressDownloadReport() {
+                const pname = document.getElementById('pname').value;
+                const rpauth = document.getElementById('rpauth').value;
+                const rpdate = document.getElementById('rpdate').value;
+                const objective = document.getElementById('objective').value;
+                const tasks = document.getElementById('tasks').value;
+                const milestones = document.getElementById('milestones').value;
+                const obstacles = document.getElementById('obstacles').value;
+                const delays = document.getElementById('delays').value;
+                const plannedtasks = document.getElementById('plannedtasks').value;
+                const deadlines = document.getElementById('deadlines').value;
+                const metrices = document.getElementById('metrices').value;
+                const action = document.getElementById('action').value;
+                const notes = document.getElementById('notes').value;
+
+                fetch('/generate-progress-report', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ pname, rpauth, rpdate, objective, tasks, milestones, obstacles, delays, plannedtasks, deadlines, metrices, action, notes})
+                })
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `${rpdate}_Progress_Report.docx`;
+                    a.click();
+                });
+            }
+        </script>
+    </div>
+
+    <div class="reports-page-end">
+        <div class="page-btn">
+            <a href="team.html" class="btn">Team >>></a>
+        </div>  
+    </div>
+</body>
+<footer>
+    <p><b>&copy; 2024 Punch Card Project Management. All rights reserved.</b></p>
+</footer>
+</html>
