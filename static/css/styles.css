@@ -375,7 +375,7 @@ button#close-modal {
 
 /* Risks styling */
 .container {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .table th, .table td {
@@ -456,6 +456,65 @@ h2 {
 
 
 /* Team styling */
+.team-building-section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.team-building-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.team-building-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.activity {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.activity:hover {
+    background-color: #e0f7fa; /* Light teal background */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increased shadow for hover */
+    transform: scale(1.05); /* Slightly enlarge the card */
+}
+
+.activity h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.activity ul {
+    padding-left: 20px;
+}
+
+.activity li {
+    margin-bottom: 10px;
+}
+
 .card-img-top {
     width: 150px; /* Adjust to make the image larger or smaller */
     height: 180px; /* Set the same value as width to make it square */
